@@ -19,7 +19,7 @@ area = st.sidebar.slider(label = 'house area', min_value = 0, max_value = 100000
 features = {
   'area': area}
 
-features_df = pd.DataFrame([Features])
+features_df = pd.DataFrame([features])
 
 st.table(features_df)
 
