@@ -1,13 +1,13 @@
-from pycaret.regression import load_model, predict_model
+import pickle
+import sklearn
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-def predict(model, df):
-  prediction = predict_model(estimator = model, data = df)
-  return prediction
-
-model = load_model('house_price')
+def load_model():
+    loaded_model = pickle.load(open("house_price.pkl", 'rb'))
+    return loaded_model
+  
 
 st.title('House Pricing Prediction Web App')
 st.write('This is a testing website for house pricing prediction.\
@@ -26,5 +26,6 @@ features_df = pd.DataFrame([features])
 st.table(features_df)
 
 if st.button('Predict'):
-   prediction = predict(model, features_df)
+   load = load_model()
+   prediction = load_model.predict(input)
    st.write('Based on features values, the house price is ' + str(int(prediction)))
