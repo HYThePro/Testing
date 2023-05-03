@@ -23,6 +23,6 @@ features_df = pd.DataFrame([Features])
 
 st.table(features_df)
 
-if(st.button('Predict'):
+if st.button('Predict'):
    prediction = predict(model, features_df)
    st.write('Based on features values, the house price is ' + str(int(prediction)))
