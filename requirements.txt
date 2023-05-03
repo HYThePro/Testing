@@ -1,4 +1,6 @@
-pycaret
+scikit-learn
+sklearn
+pickle
 streamlit
 fastparquet
 pandas
