@@ -5,7 +5,7 @@ import numpy as np
 
 def predict(model, df):
   prediction = predict_model(estimator = model, data = df)
-  return prediction['price'][0]
+  return prediction
 
 model = load_model('house_price')
 
