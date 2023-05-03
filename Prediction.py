@@ -21,8 +21,9 @@ bedrooms = st.sidebar.slider(label = 'Number of bedrooms', min_value = 0, max_va
 features = {
   'area': area, 'bedrooms':bedrooms}
 
-features_df = pd.DataFrame([features])
+input=np.array(features).reshape(1,-1)
 
+features_df  = pd.DataFrame([features])
 st.table(features_df)
 
 if st.button('Predict'):
