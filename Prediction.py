@@ -103,7 +103,7 @@ features = {
 adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normalize("Bathrooms",bathroom),normalize("Mainroad",mainroad),
                    normalize("Guestroom",guestroom),normalize("Basement",basement),normalize("Hot water heating",hotwaterheating),
                    normalize("Air conditioning", airconditioning), normalize("Parking",parking),normalize("Prefarea", prefarea),
-                   normalize("Furnished",furnished),normlaize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
+                   normalize("Furnished",furnished),normalize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
 
 input=np.array(adjusted_features).reshape(-1, 1)
 
