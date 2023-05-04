@@ -13,7 +13,7 @@ def normalize(type,val):
         return (val-(5.134663e+03))/(2.199482e+03)
     elif type=="Bedrooms":
         return (val-(2.990826e+00))/(7.325388e-01)
-    elif type=="Bathroms"
+    elif type=="Bathrooms"
         return (val-(1.295872e+00))/(5.041856e-01)	
     elif type=="stories"
         return (val-(1.811927e+00))/(8.494169e-01)	
