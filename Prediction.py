@@ -7,8 +7,13 @@ import numpy as np
 def load_model():
     loaded_model = pickle.load(open("house_price.pkl", 'rb'))
     return loaded_model
-  
 
+def normalize(type,val):
+    if type=="Area":
+        return (val-5150.541284)/(2170.141023)
+    elif type=="Bedrooms":
+        return (val-2.965138)/(0.738064)
+  
 st.title('House Pricing Prediction Web App')
 st.write('This is a testing website for house pricing prediction.\
            Just for testing and practice web deployment for my own use. ')
@@ -21,7 +26,9 @@ bedrooms = st.sidebar.slider(label = 'Number of bedrooms', min_value = 0, max_va
 features = {
   'area': area, 'bedrooms':bedrooms}
 
-input=np.array(features).reshape(1,-1)
+adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedroom)]
+
+input=np.array(adjusted_features).reshape(1,-1)
 
 features_df  = pd.DataFrame([features])
 st.table(features_df)
