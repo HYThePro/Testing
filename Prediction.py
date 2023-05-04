@@ -91,7 +91,7 @@ prefarea = st.sidebar.slider(label = 'Prefer area', min_value = 0, max_value = 1
                              value = 0, step = 1)
 furnished = st.sidebar.slider(label = 'furnished?', min_value = 0, max_value = 1,
                              value = 0, step = 1)
-semi-furnished = st.sidebar.slider(label = 'semi-furnished?', min_value = 0, max_value = 1,
+semi_furnished = st.sidebar.slider(label = 'semi-furnished?', min_value = 0, max_value = 1,
                              value = 0, step = 1)
 unfurnished = st.sidebar.slider(label = 'unfurnished?', min_value = 0, max_value = 1,
                              value = 0, step = 1)
@@ -103,7 +103,7 @@ features = {
 adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normalize("Bathrooms",bathroom),normalize("Mainroad",mainroad),
                    normalize("Guestroom",guestroom),normalize("Basement",basement),normalise("Hot water heating",hotwaterheating),
                    normalize("Air conditioning", airconditioning), normalize("Parking",parking),normalize("Prefarea", prefarea),
-                   normalize("Furnished",furnished),normlaize("Semi-furnished",semi-furnished),normalize("Unfurnished",unfurnished)]
+                   normalize("Furnished",furnished),normlaize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
 
 input=np.array(adjusted_features).reshape(-1, 1)
 
