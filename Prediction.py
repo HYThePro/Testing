@@ -51,8 +51,9 @@ bedrooms = st.slider(label = 'Number of bedrooms', min_value = -2.71770685, max_
 features = {
   'area': area, 'bedrooms':bedrooms}
 
+adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),]
 
-input=np.array(features).reshape(1,-1)
+input=np.array(adjusted_features).reshape(1,-1)
 
 features_df  = pd.DataFrame([features])
 st.table(features_df)
