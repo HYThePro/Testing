@@ -105,7 +105,7 @@ adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normali
                    normalize("Air conditioning", airconditioning), normalize("Parking",parking),normalize("Prefarea", prefarea),
                    normalize("Furnished",furnished),normalize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
 
-input=np.array(adjusted_features).reshape(-1, 1)
+input=np.array(adjusted_features).reshape(1, -1)
 
 features_df  = pd.DataFrame([features])
 st.table(features_df)
