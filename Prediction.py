@@ -32,7 +32,7 @@ def normalize(type,val):
     elif type=="Prefarea":
         return (val-(2.293578e-01))/(4.204198e-01)
     elif type=="Furnished":
-        retun (val-(2.591743e-01))/(4.381815e-01)
+        return (val-(2.591743e-01))/(4.381815e-01)
     elif type=="Semi-furnished":
         return (val-(4.174312e-01))/(4.931353e-01)
     elif type=="Unfurnished":
