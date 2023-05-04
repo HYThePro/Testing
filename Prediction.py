@@ -15,7 +15,7 @@ def normalize(type,val):
         return (val-(2.990826e+00))/(7.325388e-01)
     elif type=="Bathrooms":
         return (val-(1.295872e+00))/(5.041856e-01)	
-    elif type=="stories":
+    elif type=="Stories":
         return (val-(1.811927e+00))/(8.494169e-01)	
     elif type=="Mainroad":
         return (val-(8.555046e-01))/(3.515914e-01)	
@@ -100,7 +100,7 @@ unfurnished = st.sidebar.slider(label = 'unfurnished?', min_value = 0, max_value
 features = {
   'area': area, 'bedrooms':bedrooms}
 
-adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normalize("Bathrooms",bathroom),normalize("Mainroad",mainroad),
+adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normalize("Bathrooms",bathroom),normalize("Stories",stories),normalize("Mainroad",mainroad),
                    normalize("Guestroom",guestroom),normalize("Basement",basement),normalize("Hot water heating",hotwaterheating),
                    normalize("Air conditioning", airconditioning), normalize("Parking",parking),normalize("Prefarea", prefarea),
                    normalize("Furnished",furnished),normalize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
