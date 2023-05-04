@@ -43,9 +43,9 @@ st.text("")
 st.write("---")
 st.text("")
 
-area = st.slider(label = 'house area', min_value = 0, max_value = 10000,
+area = st.sidebar.slider(label = 'house area', min_value = 0, max_value = 10000,
                          value = 1000, step = 1)
-bedrooms = st.slider(label = 'Number of bedrooms', min_value = 0, max_value = 10,
+bedrooms = st.sidebar.slider(label = 'Number of bedrooms', min_value = 0, max_value = 10,
                              value = 3, step = 1)
 
 features = {
