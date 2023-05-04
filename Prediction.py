@@ -13,29 +13,29 @@ def normalize(type,val):
         return (val-(5.134663e+03))/(2.199482e+03)
     elif type=="Bedrooms":
         return (val-(2.990826e+00))/(7.325388e-01)
-    elif type=="Bathrooms"
+    elif type=="Bathrooms":
         return (val-(1.295872e+00))/(5.041856e-01)	
-    elif type=="stories"
+    elif type=="stories":
         return (val-(1.811927e+00))/(8.494169e-01)	
-    elif type=="Mainroad"
+    elif type=="Mainroad":
         return (val-(8.555046e-01))/(3.515914e-01)	
-    elif type=="Guestroom"
+    elif type=="Guestroom":
         return (val-(1.674312e-01))/(3.733604e-01)
-    elif type=="Basement"
+    elif type=="Basement":
         return (val-(3.463303e-01))/(4.758000e-01)	
-    elif type=="Hot water heating"
+    elif type=="Hot water heating":
         return (val-(4.587156e-02))/(2.092065e-01)
-    elif type=="Air conditioning"
+    elif type=="Air conditioning":
         return (val-(3.325688e-01))/(4.711335e-01)
-    elif type=="Parking"
+    elif type=="Parking":
         return (val-(7.133028e-01))/(8.819844e-01)
-    elif type=="Prefarea"
+    elif type=="Prefarea":
         return (val-(2.293578e-01))/(4.204198e-01)
-    elif type=="Furnished"
+    elif type=="Furnished":
         retun (val-(2.591743e-01))/(4.381815e-01)
-    elif type=="Semi-furnished"
+    elif type=="Semi-furnished":
         return (val-(4.174312e-01))/(4.931353e-01)
-    elif type=="Unfurnished"
+    elif type=="Unfurnished":
         return (val-(3.233945e-01))/(4.677718e-01)
   
 st.title('House Pricing Prediction Web App')
