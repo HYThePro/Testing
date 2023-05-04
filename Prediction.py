@@ -101,7 +101,7 @@ features = {
   'area': area, 'bedrooms':bedrooms}
 
 adjusted_features=[normalize("Area",area),normalize("Bedrooms",bedrooms),normalize("Bathrooms",bathroom),normalize("Mainroad",mainroad),
-                   normalize("Guestroom",guestroom),normalize("Basement",basement),normalise("Hot water heating",hotwaterheating),
+                   normalize("Guestroom",guestroom),normalize("Basement",basement),normalize("Hot water heating",hotwaterheating),
                    normalize("Air conditioning", airconditioning), normalize("Parking",parking),normalize("Prefarea", prefarea),
                    normalize("Furnished",furnished),normlaize("Semi-furnished",semi_furnished),normalize("Unfurnished",unfurnished)]
 
