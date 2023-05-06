@@ -76,7 +76,7 @@ features = {
 
 adjusted_features=[normalize("Funding",funding),normalize("Revenue",revenue),normalize("ebit",EBIT),
                    normalize("E6",e6),normalize("E12",e12),normalize("Founders",founders),
-                   normalize("Rounds", rounds), normalize("Shareholder",shareholder),normalize("Median", median)]
+                   normalize("Rounds", rounds), normalize("Shareholder",shareholders),normalize("Median", median)]
 
 input=np.array(adjusted_features).reshape(1, -1)
 
