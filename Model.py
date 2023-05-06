@@ -10,7 +10,7 @@ def predict_rating(model, df):
     
     predictions_data = predict_model(estimator = model, data = df)
     
-    return predictions_data['revenue_c']
+    return predictions_data['revenue_c'][0]
 model = load_model("UMHackathon_model")
 
 def load_model():
