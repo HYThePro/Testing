@@ -60,6 +60,6 @@ input=np.array(adjusted_features).reshape(1, -1)
 
 
 if st.button('Predict'):
-   
-   prediction = predict_rating(model, adjusted_features_df)
+   loaded = load_model()
+   prediction =load.predict(adjusted_features_df)
    st.write('Based on features values, the house price is ' + str(int(prediction)))
