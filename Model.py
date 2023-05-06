@@ -3,18 +3,10 @@ import sklearn
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
-from pycaret.regression import load_model, predict_model
 
-def predict_rating(model, df):
-    
-    predictions_data = predict_model(estimator = model, data = df)
-    
-    return predictions_data['revenue_growthpercent']
-model = load_model("UMHackathon_model")
 
 def load_model():
-    loaded_model = pickle.load(open("UMHackathon_model.pkl", 'rb'))
+    loaded_model = pickle.load(open("VCmodel.pkl", 'rb'))
     return loaded_model
 
 def normalize(type,val):
@@ -55,7 +47,7 @@ features = {
 adjusted_features={"total_funding_c":normalize("Funding",funding),"revenue_c":normalize("Revenue",revenue),"EBIT_c":normalize("ebit",EBIT),
                    "employee_growth_6percent":normalize("E6",e6),"employee_growth_12percent":normalize("E12",e12),"num_founders":normalize("Founders",founders),
                    "num_funding_rounds":normalize("Rounds", rounds), "num_shareholders": normalize("Shareholder",shareholders),"median_share":normalize("Median", median)}
-adjusted_features_df = pd.DataFrame([adjusted_features])
+
 input=np.array(adjusted_features).reshape(1, -1)
 
 
