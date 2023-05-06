@@ -14,7 +14,7 @@ def predict_rating(model, df):
 model = load_model("UMHackathon_model")
 
 def load_model():
-    loaded_model = pickle.load(open("UMHackathon_model", 'rb'))
+    loaded_model = pickle.load(open("UMHackathon_model.pkl", 'rb'))
     return loaded_model
 
 def normalize(type,val):
