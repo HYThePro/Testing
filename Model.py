@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+from pycaret.regression import load_model, predict_model
 
 def load_model():
     loaded_model = pickle.load(open("UMHackathon_model.pkl", 'rb'))
