@@ -6,6 +6,12 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from pycaret.regression import load_model, predict_model
 
+def predict_rating(model, df):
+    
+    predictions_data = predict_model(estimator = model, data = df)
+    
+    return predictions_data['Label'][0]
+
 def load_model():
     loaded_model = pickle.load(open("UMHackathon_model.pkl", 'rb'))
     return loaded_model
@@ -30,36 +36,6 @@ def normalize(type,val):
     elif type=="Median":
         return (val-(42.792926))/(31.694526)
     
-  
-st.title('House Pricing Prediction Web App')
-st.write("""
-        This is a testing website for house pricing prediction.
-        
-        Just for testing and practice web deployment for my own use.""")
-
-st.subheader("Calculation")
-st.write("""
-          Please enter your value after calculated based on the formula below
-          
-          Formula = (X-u)/s
-          
-          X = your value
-          
-          u = mean
-          
-          s = standard deviation""")
-st.text("")
-st.write("---")
-st.text("")
-st.subheader("Mean and standard deviation")
-st.write("""
-         Mean for area = 5150.541284, stadard deviation = 2170.141023
-         
-         Mean for bedrooms = 2.965138, standard deviation = 0.738064""")
-st.text("")
-st.write("---")
-st.text("")
-
 funding = st.number_input(label='Total funding')
 revenue = st.number_input(label='Revenue')
 EBIT = st.number_input(label='EBIT')
@@ -84,5 +60,5 @@ input=np.array(adjusted_features).reshape(1, -1)
 
 if st.button('Predict'):
    load = load_model()
-   prediction = load.predict(adjusted_features)
+   prediction = load.predict_rating(load, pd.DataFrame(input, colums=features.keys()))
    st.write('Based on features values, the house price is ' + str(int(prediction)))
