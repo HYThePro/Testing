@@ -72,7 +72,7 @@ median = st.number_input(label='Median share')
 features = {
   'Funding': funding, 'Revenue':revenue, 'ebit':EBIT,
   'E6':e6, 'E12':e12, 'Founders':founders, 'Rounds':rounds,
-  'Shareholder':shareholder, 'Meidan':median}
+  'Shareholder':shareholder, 'Median':median}
 
 adjusted_features=[normalize("Funding",funding),normalize("Revenue",revenue),normalize("ebit",EBIT),
                    normalize("E6",e6),normalize("E12",e12),normalize("Founders",founders),
