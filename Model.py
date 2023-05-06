@@ -52,6 +52,6 @@ input=np.array(adjusted_features).reshape(1, -1)
 
 
 if st.button('Predict'):
-  
-   prediction =model.predict(adjusted_features)
+   loaded = load_model()
+   prediction = loaded.predict(input)
    st.write('Based on features values, the house price is ' + str(int(prediction)))
