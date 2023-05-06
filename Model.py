@@ -52,9 +52,9 @@ features = {
   'E6':e6, 'E12':e12, 'Founders':founders, 'Rounds':rounds,
   'Shareholder':shareholders, 'Median':median}
 
-adjusted_features={"Funding":normalize("Funding",funding),"Revenue":normalize("Revenue",revenue),"ebit":normalize("ebit",EBIT),
-                   "E6":normalize("E6",e6),"E12":normalize("E12",e12),"Founders":normalize("Founders",founders),
-                   "Rounds":normalize("Rounds", rounds), "Shareholder": normalize("Shareholder",shareholders),"Median":normalize("Median", median)}
+adjusted_features={"total_funding_c":normalize("Funding",funding),"revenue_c":normalize("Revenue",revenue),"EBIT_c":normalize("ebit",EBIT),
+                   "employee_growth_6percent":normalize("E6",e6),"employee_growth_12percent":normalize("E12",e12),"num_founders":normalize("Founders",founders),
+                   "num_funding_rounds":normalize("Rounds", rounds), "num_shareholders": normalize("Shareholder",shareholders),"median_share":normalize("Median", median)}
 adjusted_features_df = pd.DataFrame([adjusted_features])
 input=np.array(adjusted_features).reshape(1, -1)
 
