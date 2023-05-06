@@ -11,6 +11,7 @@ def predict_rating(model, df):
     predictions_data = predict_model(estimator = model, data = df)
     
     return predictions_data['Label'][0]
+model = load_model("UMHackathon_model.pkl")
 
 def load_model():
     loaded_model = pickle.load(open("UMHackathon_model.pkl", 'rb'))
@@ -54,11 +55,11 @@ features = {
 adjusted_features=[normalize("Funding",funding),normalize("Revenue",revenue),normalize("ebit",EBIT),
                    normalize("E6",e6),normalize("E12",e12),normalize("Founders",founders),
                    normalize("Rounds", rounds), normalize("Shareholder",shareholders),normalize("Median", median)]
-
+adjusted_features_df = pd.DataFrame([adjusted_features])
 input=np.array(adjusted_features).reshape(1, -1)
 
 
 if st.button('Predict'):
-   load = load_model()
-   prediction = load.predict_rating(load, pd.DataFrame(input, colums=features.keys()))
+   
+   prediction = predict_rating(model, adjusted_features_df)
    st.write('Based on features values, the house price is ' + str(int(prediction)))
